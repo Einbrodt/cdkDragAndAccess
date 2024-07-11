@@ -1,0 +1,37 @@
+{
+  "name": "drag-and-access",
+  "version": "1.0.0.",
+  "description": "A library for accessing dropped interfaces within Angular Material Drag and Drop",
+  "author": "Einbrodt",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^18.1.0",
+    "@angular/core": "^18.1.0",
+    "@angular/material": "^18.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "drag",
+    "drop",
+    "cdk",
+    "drag-and-drop"
+  ],
+  "sideEffects": false,
+  "module": "fesm2022/drag-and-access.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/drag-and-access.mjs",
+      "esm": "./esm2022/drag-and-access.mjs",
+      "default": "./fesm2022/drag-and-access.mjs"
+    }
+  }
+}

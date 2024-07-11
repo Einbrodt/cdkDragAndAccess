@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -90,9 +91,43 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "drag-and-access": {
+      "projectType": "library",
+      "root": "projects/drag-and-access",
+      "sourceRoot": "projects/drag-and-access/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/drag-and-access/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/drag-and-access/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/drag-and-access/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/drag-and-access/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
