@@ -72,4 +72,22 @@ describe('DragAndAccess', () => {
 
     expect(consoleErrorSpy).toHaveBeenCalledWith('Item data is undefined');
   });
+
+  it('should get item data', () => {
+    const dragAndAccess = new DragAndAccess<any, any, any>(
+      0,
+      1,
+      dragItem,
+      dropList,
+      previousDropList,
+      true,
+      { x: 100, y: 200 },
+      { x: 150, y: 250 },
+      mouseEvent
+    );
+
+    const i = dragAndAccess.accessItem();
+
+    expect(i).toEqual({ id: 1, name: 'Test Item'});
+  });
 });

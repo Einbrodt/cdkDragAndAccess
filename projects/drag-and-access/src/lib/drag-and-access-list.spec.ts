@@ -69,11 +69,11 @@ describe('DragAndAccessList', () => {
       event: new MouseEvent('mouseup')
     };
 
-    spyOn(directive.customDropped, 'emit');
+    spyOn(directive.dragAndAccessDropped, 'emit');
 
     directive.dropped.emit(dropEvent);
 
-    expect(directive.customDropped.emit).toHaveBeenCalledWith(jasmine.objectContaining({
+    expect(directive.dragAndAccessDropped.emit).toHaveBeenCalledWith(jasmine.objectContaining({
       previousIndex: dropEvent.previousIndex,
       currentIndex: dropEvent.currentIndex,
       item: dropEvent.item,

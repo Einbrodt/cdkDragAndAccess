@@ -41,4 +41,11 @@ export class DragAndAccess<T, O, I> implements CdkDragDrop<T, O, I> {
       console.error('Item data is undefined');
     }
   }
+  accessItem(): I | null {
+    try {
+      return this.item.data as I
+    } catch (e) {
+      return null
+    }
+  }
 }
